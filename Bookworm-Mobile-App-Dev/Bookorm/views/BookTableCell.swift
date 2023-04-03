@@ -7,9 +7,9 @@
 
 import UIKit
 
-class BookTableCell: UITableViewCell {
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var coverImageView: UIImageView!
+class BookTableViewCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var star1: UIImageView!
     @IBOutlet var star2: UIImageView!
     @IBOutlet var star3: UIImageView!

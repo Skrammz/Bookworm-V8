@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,91 +23,116 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="275" id="09D-I1-vIW" userLabel="Book Cell" customClass="BookTableCell" customModule="Bookorm" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="275" id="09D-I1-vIW" userLabel="List Cell" customClass="MyCustomTableViewCell">
                                         <rect key="frame" x="0.0" y="50" width="361" height="275"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="09D-I1-vIW" id="lTb-XN-Zg1">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="09D-I1-vIW" id="lTb-XN-Zg1" customClass="ListTableCell" customModule="Bookorm" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="275"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="mnT-yQ-u97">
-                                                    <rect key="frame" x="20" y="25" width="321" height="224"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMh-wE-Dbg">
+                                                    <rect key="frame" x="140" y="0.0" width="81" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD:Bookworm-V10-main/Bookworm-Mobile-App-Dev/Bookorm/Base.lproj/Main.storyboard
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vfm-K0-gQw">
+                                                    <rect key="frame" x="20" y="26" width="321" height="222"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Avm-PQ-VUS">
+                                                        <size key="itemSize" width="128" height="217"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="gCb-vE-U0T" customClass="BookCollectionCell" customModule="Bookorm" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="2.6666666666666665" width="128" height="217"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4gm-aK-hRP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="217"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="homeBookCover" translatesAutoresizingMaskIntoConstraints="NO" id="oO8-hd-9gS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="156"/>
+=======
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="179" id="0gl-Vs-BiY" customClass="BookTableCell" customModule="Bookorm" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="179" id="0gl-Vs-BiY" userLabel="Book Table View Cell" customClass="BookTableCell" customModule="Bookorm" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="50" width="321" height="179"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0gl-Vs-BiY" id="tbP-bO-fZC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="179"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="homeBookCover" translatesAutoresizingMaskIntoConstraints="NO" id="Sbf-0Q-vLp">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="homeBookCover" translatesAutoresizingMaskIntoConstraints="NO" id="Sbf-0Q-vLp" userLabel="Thumbnail Image View">
                                                                         <rect key="frame" x="2" y="11" width="90" height="87"/>
+>>>>>>> 68958a5262afbfa92b22f5fb72a1b7d318fee6ed:Bookworm-Mobile-App-Dev/Bookorm/Base.lproj/Main.storyboard
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-V3-wVo">
-                                                                        <rect key="frame" x="-2" y="106" width="26" height="42"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <color key="tintColor" name="AccentColor"/>
-                                                                    </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="2g8-cW-Rt8">
-                                                                        <rect key="frame" x="15" y="106" width="26" height="42"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-x9-Gk9">
+                                                                        <rect key="frame" x="17" y="175" width="26" height="42"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                     </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="Eth-go-uOc">
-                                                                        <rect key="frame" x="32" y="106" width="26" height="42"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="ppA-Vm-TE0">
+                                                                        <rect key="frame" x="34" y="175" width="26" height="42"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                     </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-X4-gge">
-                                                                        <rect key="frame" x="49" y="106" width="26" height="42"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="NUf-FY-88P">
+                                                                        <rect key="frame" x="51" y="175" width="26" height="42"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                     </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="syx-uk-X0T">
-                                                                        <rect key="frame" x="66" y="106" width="26" height="42"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-Cj-ewe">
+                                                                        <rect key="frame" x="68" y="175" width="26" height="42"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0na-st-pM1">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rating Star Black" translatesAutoresizingMaskIntoConstraints="NO" id="XFY-0n-eqT">
+                                                                        <rect key="frame" x="85" y="175" width="26" height="42"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
+                                                                    </imageView>
+<<<<<<< HEAD:Bookworm-V10-main/Bookworm-Mobile-App-Dev/Bookorm/Base.lproj/Main.storyboard
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdh-ux-NZo">
+                                                                        <rect key="frame" x="43" y="164" width="42" height="19"/>
+=======
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0na-st-pM1" userLabel="Title Label">
                                                                         <rect key="frame" x="24" y="97" width="42" height="19"/>
+>>>>>>> 68958a5262afbfa92b22f5fb72a1b7d318fee6ed:Bookworm-Mobile-App-Dev/Bookorm/Base.lproj/Main.storyboard
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                            </tableViewCellContentView>
+                                                            </collectionViewCellContentView>
                                                             <connections>
-                                                                <outlet property="bookLabel" destination="0na-st-pM1" id="iDL-5D-WVM"/>
-                                                                <outlet property="coverImageView" destination="Sbf-0Q-vLp" id="WeS-K4-xDk"/>
-                                                                <outlet property="star1" destination="fLb-V3-wVo" id="Ph2-4h-gpE"/>
-                                                                <outlet property="star2" destination="2g8-cW-Rt8" id="i1O-jc-VSi"/>
-                                                                <outlet property="star3" destination="Eth-go-uOc" id="IrP-5o-m9q"/>
-                                                                <outlet property="star4" destination="zpF-X4-gge" id="U3a-7S-YDE"/>
-                                                                <outlet property="star5" destination="syx-uk-X0T" id="MBp-U6-dyK"/>
+                                                                <outlet property="bookLabel" destination="kdh-ux-NZo" id="tx4-NK-qv0"/>
+                                                                <outlet property="coverImageView" destination="oO8-hd-9gS" id="w6f-3S-eUL"/>
+                                                                <outlet property="star1" destination="ulF-x9-Gk9" id="GgY-bp-6od"/>
+                                                                <outlet property="star2" destination="ppA-Vm-TE0" id="iZG-ou-mgY"/>
+                                                                <outlet property="star3" destination="NUf-FY-88P" id="Zcc-Ke-G1R"/>
+                                                                <outlet property="star4" destination="Jt2-Cj-ewe" id="YYX-Pn-gg8"/>
+                                                                <outlet property="star5" destination="XFY-0n-eqT" id="May-dq-NZF"/>
                                                             </connections>
-                                                        </tableViewCell>
-                                                    </prototypes>
-                                                </tableView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMh-wE-Dbg">
-                                                    <rect key="frame" x="140" y="11" width="81" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
+                                            <connections>
+                                                <outlet property="listNameLabel" destination="xMh-wE-Dbg" id="rbp-JT-dY9"/>
+                                            </connections>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="listNameLabel" destination="xMh-wE-Dbg" id="PMn-Lj-rWQ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-eZ-M8a">
-                                <rect key="frame" x="-1" y="47" width="393" height="44"/>
+                                <rect key="frame" x="-2" y="47" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Home" id="lX2-Ws-qpE">
@@ -124,7 +150,7 @@
                                                         <backgroundConfiguration key="background" image="book.fill" catalog="system"/>
                                                     </buttonConfiguration>
                                                     <connections>
-                                                        <segue destination="e2h-eq-k2f" kind="show" id="Khf-bF-kfk"/>
+                                                        <segue destination="e2h-eq-k2f" kind="show" identifier="GoToDetail" id="Khf-bF-kfk"/>
                                                     </connections>
                                                 </button>
                                             </barButtonItem>
@@ -209,7 +235,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-g5-SPB">
-                                <rect key="frame" x="-1" y="44" width="392" height="44"/>
+                                <rect key="frame" x="-2" y="44" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Detail" id="rA2-3r-VTm">
@@ -333,7 +359,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utH-O7-mn1">
-                                <rect key="frame" x="0.0" y="45" width="392" height="44"/>
+                                <rect key="frame" x="0.0" y="45" width="391" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Profile" id="lpx-Ph-1Ls">
@@ -385,7 +411,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gdg-55-qK7"/>
-        <segue reference="3Vy-QI-UFe"/>
+        <segue reference="9dd-i3-jRQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rating Star Black" width="280" height="280"/>
